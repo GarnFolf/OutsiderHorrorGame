@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC8C1A80-32C2-460F-9C6D-CD84F91847BE}" SchemaVersion="119" RootDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" ParentDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}">
+	<Events>
+		<WorkUnit Name="SFX" ID="{FC8C1A80-32C2-460F-9C6D-CD84F91847BE}" OwnerID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="KeyScroll_Play" ID="{F20177BA-10DD-4110-B09D-A010D2C005C7}">
+					<ChildrenList>
+						<Action Name="" ID="{561CDAFC-800D-4545-AABD-DC03100E281F}" ShortID="202147136">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KeyScroll" ID="{8EAB99C7-04FD-48D4-955F-41725282E26B}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{29839BD9-59E9-43B1-940B-3C1AF95DA28E}" ShortID="242176903">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4FBA2AB7-1E94-4314-89FC-D18EA65A41BF}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="SeekTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24D3E174-1AD6-483B-A0BC-A9157CD7D5B1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KeyScroll" ID="{8EAB99C7-04FD-48D4-955F-41725282E26B}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerLoading_Play" ID="{9032F4CA-B3FB-4243-811E-473E94F19EC5}">
+					<ChildrenList>
+						<Action Name="" ID="{6575EA3C-1BFD-433D-A8A4-246A912FA675}" ShortID="276319375">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerLoading" ID="{74BE7D19-FC1D-4455-B2F3-186E1D2D83AF}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerLoading_Stop" ID="{BD7DFA11-6AEE-4E8E-B51D-6C6A3705A7EC}">
+					<ChildrenList>
+						<Action Name="" ID="{564FE3CB-0900-4A0D-A9F4-B785A7069958}" ShortID="995639596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerLoading" ID="{74BE7D19-FC1D-4455-B2F3-186E1D2D83AF}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="KeyScroll_Stop" ID="{50E00679-1F4D-4900-A4C6-622F24A48A2E}">
+					<ChildrenList>
+						<Action Name="" ID="{A8FE8C0F-64A6-4238-BFDA-B67738463A7E}" ShortID="389240837">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KeyScroll" ID="{8EAB99C7-04FD-48D4-955F-41725282E26B}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerAmbienceMain_Play" ID="{78585EE2-3DD3-4A9B-BC31-F0A577B1FA05}">
+					<ChildrenList>
+						<Action Name="" ID="{06D2287E-C3D5-44F9-88BA-12219F693B4A}" ShortID="299812582">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerAmbienceMain_Stop" ID="{09353F2E-02D9-43C4-B6A4-6397D6282765}">
+					<ChildrenList>
+						<Action Name="" ID="{675C60BC-23E8-4634-82B6-A63D4ED5E8F6}" ShortID="394304429">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerBootUp_Play" ID="{1331BB4F-FA30-472F-8FFE-C971DC700E80}">
+					<ChildrenList>
+						<Action Name="" ID="{734FF3EC-0D15-4566-BCFA-6E01C072F70B}" ShortID="1035537590">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerBootUp_Stop" ID="{2003AD53-06BA-44AE-8DC4-BD1CD5DA5747}">
+					<ChildrenList>
+						<Action Name="" ID="{A0B8D936-73D7-42A0-A902-993D25D5B4C8}" ShortID="397313616">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

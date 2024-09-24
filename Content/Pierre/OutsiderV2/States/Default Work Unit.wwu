@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{991BB9A8-3F6B-4BB8-A4FF-6AD8ACC7A8BE}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{991BB9A8-3F6B-4BB8-A4FF-6AD8ACC7A8BE}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}">
+					<ChildrenList>
+						<State Name="None" ID="{EA9AA747-E6B2-443C-9678-7F34DDB541AF}"/>
+						<State Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
+						<State Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}">
+					<ChildrenList>
+						<State Name="None" ID="{7D01EE19-61BB-4686-9396-F34E2CA2EF64}"/>
+						<State Name="GaryInGame" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+						<State Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
