@@ -642,6 +642,11 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -655,6 +660,11 @@
 						<Sound Name="ComputerMusicAmbient" ID="{26DF6B69-83F6-49E2-B3C0-AFF25AEFA2EE}" ShortID="498470819">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -716,12 +726,38 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{9FB3CB2D-032F-4F04-B43A-0DE06ACD930F}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="OnComputer" ID="{E47A6EBF-4AE8-40E7-8D42-A166047E086C}"/>
+								<CustomState Name="" ID="{DE9B7054-5806-4D12-B17F-B86ADFFDFDDA}" ShortID="556174994"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OffComputer" ID="{45750615-EC22-43C5-A906-9FC1036B25B2}"/>
+								<CustomState Name="" ID="{A1A302CB-8437-4B61-8D60-7AA9ABCDAFD9}" ShortID="863677909">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</BlendContainer>
 				<BlendContainer Name="ComputerLoading" ID="{578321FA-1246-40B4-A944-CE3A885C01F5}" ShortID="879328074">
 					<PropertyList>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -953,6 +989,52 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="MatchLight" ID="{41E1A059-2EE2-4299-8CF5-3217053A31DB}" ShortID="800930100">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BA661C25-BC30-4702-ABA0-3D2180A7C8EE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MatchLight" ID="{8EB0D679-D8B0-4A9F-A7C2-BB1EA8138D78}">
+							<Language>SFX</Language>
+							<AudioFile>MatchLight.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="103718559"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="MatchLight" ID="{8EB0D679-D8B0-4A9F-A7C2-BB1EA8138D78}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

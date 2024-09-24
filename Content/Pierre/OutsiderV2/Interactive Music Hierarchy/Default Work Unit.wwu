@@ -3,12 +3,7 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{0F43A6CE-83E1-46C0-B728-E13A9DE3E125}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicPlaylistContainer Name="GaryProximity" ID="{DD39B824-4AD7-4137-ABAA-29AAA28BBBB6}" ShortID="694776547">
-					<PropertyList>
-						<Property Name="Tempo" Type="Real64" Value="100"/>
-						<Property Name="TimeSignatureLower" Type="int16" Value="8"/>
-						<Property Name="TimeSignatureUpper" Type="int16" Value="7"/>
-					</PropertyList>
+				<MusicSwitchContainer Name="GaryState" ID="{25000BEE-2519-4053-87A2-5FD9657798E0}" ShortID="879001992">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
@@ -16,36 +11,14 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 						</Reference>
-						<Reference Name="PlaylistRoot">
-							<Custom>
-								<MusicPlaylistItem Name="" ID="{70D4D3E8-6964-4044-848F-66D95FCA677A}" ShortID="64646060">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{34B777A2-7AFF-401D-AC58-08355CBA88E3}" ShortID="217636594">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Segment">
-													<ObjectRef Name="HesAlive" ID="{15E5EBFC-2D4D-411B-B2F6-4E105EBFFEE6}" WorkUnitID="{0F43A6CE-83E1-46C0-B728-E13A9DE3E125}"/>
-												</Reference>
-											</ReferenceList>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
-							</Custom>
-						</Reference>
 						<Reference Name="TransitionRoot">
 							<Custom>
-								<MusicTransition Name="Root" ID="{D87ACD43-3DCB-4913-A020-EA3791B00D41}">
+								<MusicTransition Name="Root" ID="{847653A5-9DFD-4A43-B4E1-DFA7F3DB7921}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{9E020CCE-42EF-471A-9CFE-05C97A430E6B}">
+										<MusicTransition Name="Transition" ID="{C1DDB031-7254-4697-BBE3-C4D55ADB10EB}">
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -55,9 +28,14 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="HesAlive" ID="{15E5EBFC-2D4D-411B-B2F6-4E105EBFFEE6}" ShortID="609279532">
+						<MusicSegment Name="Layers" ID="{BA36825F-4D76-4151-AEDF-34FE81BE7A97}" ShortID="475629736">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="122400"/>
+								<Property Name="EndPosition" Type="Real64" Value="124180.988062414"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -68,14 +46,21 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="HesAlive" ID="{C90472F9-1D61-4E40-9CA5-80FA36D17F8F}" ShortID="680567162">
+								<MusicTrack Name="2 LockedIn" ID="{7368126C-934A-4ED4-AF26-F01670E688B7}" ShortID="941941948">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 										</Reference>
 										<Reference Name="TransitionRoot">
 											<Custom>
-												<MusicTransition Name="Root" ID="{69F039B6-C47D-4712-895B-DFB079A684EB}">
+												<MusicTransition Name="Root" ID="{3E2FA8A4-BE88-44B1-9E71-DFEC7E93926C}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -85,7 +70,390 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="HesAlive" ID="{B7F19191-3921-4E3E-B233-BBEFB29DC525}">
+										<AudioFileSource Name="2 LockedIn" ID="{EB6CA005-D288-4138-81A4-23222D0C783D}">
+											<Language>SFX</Language>
+											<AudioFile>2 LockedIn.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="28380376"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+												<CustomState Name="" ID="{42EAC803-E45B-4AFC-AC08-8C727CE677F5}" ShortID="594773141">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+												<CustomState Name="" ID="{9820C25B-F390-4676-976E-A7EA2137EB61}" ShortID="714880428">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+												<CustomState Name="" ID="{AB8122E2-6AA7-4E84-9AA7-D8A746EFBC0B}" ShortID="450440945"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{394C7644-0E37-4BC1-95BE-592BD5E4C257}" ShortID="417596425">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{EA485DD9-B932-467A-8E4D-1B359121726C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>29.8374</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>41.73442</XPos>
+																				<YPos>-4.23022</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Exp2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0E0F76D5-19DF-4EC0-AC4C-A9365EA6AC60}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="2 LockedIn" ID="{268DA6DC-A32B-45F7-B6D3-46B53F09AFEA}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="122400"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="2 LockedIn" ID="{EB6CA005-D288-4138-81A4-23222D0C783D}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="3 Acercando" ID="{BE2FC52B-0E8E-40C0-9141-9EECB1D99C56}" ShortID="160436104">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{7F7745BF-CF52-49C1-9A0E-1601BCDA447B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="3 Acercando" ID="{8F1A5D2E-5940-4DF1-9B73-54C454C5CECD}">
+											<Language>SFX</Language>
+											<AudioFile>3 Acercando.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="388217956"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+												<CustomState Name="" ID="{BDC23C8A-FFEA-4285-8901-9B6CEBD88021}" ShortID="860594881">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+												<CustomState Name="" ID="{EB98CBE5-E50D-4802-B877-D1A4F5D66072}" ShortID="934421350">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+												<CustomState Name="" ID="{FC1B5158-EC7D-45E3-9499-48FBE9A1020F}" ShortID="245696162"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{0FBC9ABF-3E48-4DA3-A620-ED7423B22BA7}" ShortID="125338806">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{35A8287F-F150-4B96-A2C0-6659ABC1CEB1}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>60</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F10A3C69-959B-40D6-B0ED-5727A656CAD0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="3 Acercando" ID="{CF64E251-102D-42B3-97A9-6DB6CED844A0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="117600"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="3 Acercando" ID="{8F1A5D2E-5940-4DF1-9B73-54C454C5CECD}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="4 RightOnYourTail" ID="{A7E4423E-493F-451A-A662-7B5F2906990C}" ShortID="906457430">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{D192FC88-B0D3-4A03-BB86-80568A3E10D8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="4 RightOnYourTail" ID="{3EE0BA0C-3681-49F3-868E-1BE1C746DDFC}">
+											<Language>SFX</Language>
+											<AudioFile>4 RightOnYourTail.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="664601064"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+												<CustomState Name="" ID="{DD152719-7AA0-4712-BD80-1C807FDB04BE}" ShortID="519165492">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+												<CustomState Name="" ID="{7DB6639C-FAD9-490B-9CB5-289D5A16CD3D}" ShortID="198360116">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+												<CustomState Name="" ID="{0AF0181D-CED4-44F2-A479-3538015579F0}" ShortID="980153634"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{8B19FA9B-FB99-4BD8-B45B-71DF725347F7}" ShortID="104780834">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{5907F680-97B5-4743-AD86-41BC9529B833}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>80</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log2</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>88.61789</XPos>
+																				<YPos>-0.9302</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{FEE5C20C-2D80-45D3-BDA7-71CEDE694D51}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="4 RightOnYourTail" ID="{AF602F37-70A6-496C-94AB-94CAD99375AC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="117600"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="4 RightOnYourTail" ID="{3EE0BA0C-3681-49F3-868E-1BE1C746DDFC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="HesAlive" ID="{67303B04-B280-43A0-825F-76DD9EE878C0}" ShortID="721519085">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{FA34429F-EA33-490A-806F-4C951C9971EC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HesAlive" ID="{F3EF8198-DEAD-4B11-A7B6-48B00A8ACA30}">
 											<Language>SFX</Language>
 											<AudioFile>HesAlive.wav</AudioFile>
 											<MediaIDList>
@@ -94,21 +462,58 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{E02DF49F-1E16-4A9B-8AF3-A87BB0DDA2B1}" ShortID="316079645">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{1C24F13A-F3FB-4416-9CA7-BA6FF5580ABA}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{108FA68F-F90F-40AB-B82B-35C491AF2419}">
+													<MusicTrackSequence Name="" ID="{D0B0DE31-45A8-4B56-9BB2-15C264C70581}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="HesAlive" ID="{B65C0E4B-BEE9-4BF9-9D76-4A2AFB225C6C}">
+																		<MusicClip Name="HesAlive" ID="{F23CB011-1718-4041-8FB9-ABF0B4B4FD35}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="122400"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="HesAlive" ID="{B7F19191-3921-4E3E-B233-BBEFB29DC525}"/>
+																			<AudioSourceRef Name="HesAlive" ID="{F3EF8198-DEAD-4B11-A7B6-48B00A8ACA30}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -121,101 +526,40 @@
 									</ObjectLists>
 								</MusicTrack>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+										<CustomState Name="" ID="{62B65FF4-A0AD-4266-AB02-B34789FF432B}" ShortID="128752518"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+										<CustomState Name="" ID="{5A3075E2-BFF9-4CE9-AA24-FCEF59743DD8}" ShortID="633490494">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+										<CustomState Name="" ID="{6F4289FE-8EDF-4E22-9547-F5164D6CBB8F}" ShortID="17028898"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="Cues">
 									<Reference>
 										<Local>
-											<MusicCue Name="Entry Cue" ID="{69AE7550-C916-44DD-8B18-F9231719FBE9}">
+											<MusicCue Name="Entry Cue" ID="{1269BD2D-000C-496E-B57E-DAC2F1644AD7}">
 												<PropertyList>
-													<Property Name="TimeMs" Type="Real64" Value="4863.10154764577"/>
+													<Property Name="TimeMs" Type="Real64" Value="1276.06338615513"/>
 												</PropertyList>
 											</MusicCue>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<MusicCue Name="Exit Cue" ID="{347E3E8C-170F-4ED8-A32B-91A948CEF694}">
-												<PropertyList>
-													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="118942.953791559"/>
-												</PropertyList>
-											</MusicCue>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
-						<MusicSegment Name="2ndLayer (1)" ID="{BA36825F-4D76-4151-AEDF-34FE81BE7A97}" ShortID="475629736">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="122400"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="2ndLayer (1)" ID="{9D9E4EAA-F172-46B3-89D2-0E920807A66E}" ShortID="845323355">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{DA1679ED-7FD9-4B5A-86DD-AD8921CD1D7C}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="2ndLayer (1)" ID="{66821028-8074-41D1-9536-27F548402081}">
-											<Language>SFX</Language>
-											<AudioFile>2ndLayer (1).wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="748002926"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<Reference>
-												<Local>
-													<MusicTrackSequence Name="" ID="{85318A4C-291E-4F91-B6DA-7A4E15E58590}">
-														<ObjectLists>
-															<ObjectList Name="Clips">
-																<Reference>
-																	<Local>
-																		<MusicClip Name="2ndLayer (1)" ID="{0EEF9A5B-1CDE-4124-923B-85F096D44518}">
-																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="122400"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																			</PropertyList>
-																			<AudioSourceRef Name="2ndLayer (1)" ID="{66821028-8074-41D1-9536-27F548402081}"/>
-																		</MusicClip>
-																	</Local>
-																</Reference>
-															</ObjectList>
-														</ObjectLists>
-													</MusicTrackSequence>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<Reference>
-										<Local>
-											<MusicCue Name="Entry Cue" ID="{1269BD2D-000C-496E-B57E-DAC2F1644AD7}"/>
 										</Local>
 									</Reference>
 									<Reference>
@@ -223,9 +567,56 @@
 											<MusicCue Name="Exit Cue" ID="{B58E9C37-322B-4142-AFB4-EF2005BDA4BE}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="122400"/>
+													<Property Name="TimeMs" Type="Real64" Value="123676.063386155"/>
 												</PropertyList>
 											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{579B31C6-BD14-406A-A247-953618AD742E}" ShortID="168111316">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{52CC8061-C0A7-4828-80BC-E6C227C50232}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-11.53259</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50.1626</XPos>
+																		<YPos>-11.12604</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>75</XPos>
+																		<YPos>0.06052</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
 										</Local>
 									</Reference>
 								</ObjectList>
@@ -234,26 +625,30 @@
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
-							<StateGroupInfo MusicSyncType="3">
+							<StateGroupInfo>
 								<StateGroupRef Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}"/>
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
-								<StateRef Name="GaryInGame" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
-								<CustomState Name="" ID="{CB93DD35-1426-4E99-B3BF-F5107E5C8E7D}" ShortID="990162799"/>
+								<StateRef Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+								<CustomState Name="" ID="{97AD2DFB-64D3-4A12-8DBA-F3198ABFD0AA}" ShortID="672052958"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
-								<CustomState Name="" ID="{7CD13A28-4651-4446-9736-BC464CCC21AE}" ShortID="893096059">
+								<CustomState Name="" ID="{10DB6712-1F69-486C-A1F5-7DB2040F95A5}" ShortID="567249180">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64" Value="-108"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
+							<CustomState>
+								<StateRef Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+								<CustomState Name="" ID="{4320F462-E2C9-4721-BC7D-8B79D12F90DD}" ShortID="280301626"/>
+							</CustomState>
 						</CustomStateList>
 					</StateInfo>
-				</MusicPlaylistContainer>
+				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

@@ -5,6 +5,10 @@
 			<ChildrenList>
 				<WorkUnit Name="SFX" ID="{FC8C1A80-32C2-460F-9C6D-CD84F91847BE}" PersistMode="Reference"/>
 				<WorkUnit Name="Player" ID="{FB154C80-2940-49CE-B21C-F2AE6DD51366}" PersistMode="Reference"/>
+				<WorkUnit Name="Dialogue" ID="{78F08013-A3B2-47D6-BD7A-FD9702C524F8}" PersistMode="Reference"/>
+				<WorkUnit Name="Ambience" ID="{2EF4439F-DF99-4854-8874-16C09CCA006C}" PersistMode="Reference"/>
+				<WorkUnit Name="Enemy" ID="{90F5B88D-1E5E-419A-B8B3-C2B4E14749B4}" PersistMode="Reference"/>
+				<WorkUnit Name="Music" ID="{EB3DD708-1CDD-4AB1-BEE5-497A7F4AFEA4}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

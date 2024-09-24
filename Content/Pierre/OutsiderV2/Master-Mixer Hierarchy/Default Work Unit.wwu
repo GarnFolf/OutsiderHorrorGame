@@ -9,6 +9,34 @@
 							<ObjectRef Name="System" ID="{DCDCC1F0-D91D-444C-A15D-26EDF70BC61C}" WorkUnitID="{A59134D6-2B03-4C2F-8007-3A55172898A3}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="Distortion" ID="{C9518497-6747-40E1-A0D4-B1E6B6CA8D53}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{7DCEE272-BCFC-43B7-9E3D-C936C23CE7C8}" ShortID="783693208">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Guitar Distortion (Custom)" ID="{FAD6591E-02D2-433D-983B-4FB80349E9F0}" ShortID="416534577" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<PropertyList>
+																	<Property Name="DistortionDrive" Type="Real32" Value="70"/>
+																	<Property Name="DistortionTone" Type="Real32" Value="100"/>
+																	<Property Name="DistortionType" Type="int32" Value="1"/>
+																	<Property Name="WetDryMix" Type="Real32" Value="48"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 				<Bus Name="SFX" ID="{AAD783F9-11F0-4581-8A60-A795A2C040D4}">
 					<ReferenceList>
@@ -61,6 +89,13 @@
 							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+				</Bus>
+				<Bus Name="Enemy" ID="{685DE49A-D0E9-451E-B848-026D0B677CB5}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{DCDCC1F0-D91D-444C-A15D-26EDF70BC61C}" WorkUnitID="{A59134D6-2B03-4C2F-8007-3A55172898A3}"/>
+						</Reference>
+					</ReferenceList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -93,54 +93,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ComputerAmbienceMain_Play" ID="{78585EE2-3DD3-4A9B-BC31-F0A577B1FA05}">
+				<Event Name="MatchLight_Play" ID="{C1AE9984-1D6D-494C-9CCB-079B573F1BFE}">
 					<ChildrenList>
-						<Action Name="" ID="{06D2287E-C3D5-44F9-88BA-12219F693B4A}" ShortID="299812582">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
+						<Action Name="" ID="{6A36F641-BEB2-4D2C-B27F-FFE404DCC187}" ShortID="606426602">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="ComputerAmbienceMain_Stop" ID="{09353F2E-02D9-43C4-B6A4-6397D6282765}">
-					<ChildrenList>
-						<Action Name="" ID="{675C60BC-23E8-4634-82B6-A63D4ED5E8F6}" ShortID="394304429">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="ComputerBootUp_Play" ID="{1331BB4F-FA30-472F-8FFE-C971DC700E80}">
-					<ChildrenList>
-						<Action Name="" ID="{734FF3EC-0D15-4566-BCFA-6E01C072F70B}" ShortID="1035537590">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="ComputerBootUp_Stop" ID="{2003AD53-06BA-44AE-8DC4-BD1CD5DA5747}">
-					<ChildrenList>
-						<Action Name="" ID="{A0B8D936-73D7-42A0-A902-993D25D5B4C8}" ShortID="397313616">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+									<ObjectRef Name="MatchLight" ID="{41E1A059-2EE2-4299-8CF5-3217053A31DB}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -13,8 +13,16 @@
 				<StateGroup Name="GarySpawn" ID="{8C479399-9858-4A96-8FEC-2554FBB5CA0E}">
 					<ChildrenList>
 						<State Name="None" ID="{7D01EE19-61BB-4686-9396-F34E2CA2EF64}"/>
-						<State Name="GaryInGame" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
+						<State Name="GaryNotLocked" ID="{F752D3AB-F08C-49FE-923A-1DC0734DDE59}"/>
 						<State Name="GaryNotInGame" ID="{5DE3D0EA-3196-4BE3-84FD-EABFB8E625FC}"/>
+						<State Name="GaryLocked" ID="{BBD93248-8655-4EEA-B57F-F821195EEB21}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="GameState" ID="{9FB3CB2D-032F-4F04-B43A-0DE06ACD930F}">
+					<ChildrenList>
+						<State Name="None" ID="{B338D3A9-FC2C-444C-AE2B-2F1B60219A47}"/>
+						<State Name="OnComputer" ID="{E47A6EBF-4AE8-40E7-8D42-A166047E086C}"/>
+						<State Name="OffComputer" ID="{45750615-EC22-43C5-A906-9FC1036B25B2}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

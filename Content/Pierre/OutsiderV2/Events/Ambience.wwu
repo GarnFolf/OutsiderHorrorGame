@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2EF4439F-DF99-4854-8874-16C09CCA006C}" SchemaVersion="119" RootDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" ParentDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}">
+	<Events>
+		<WorkUnit Name="Ambience" ID="{2EF4439F-DF99-4854-8874-16C09CCA006C}" OwnerID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="ComputerAmbienceMain_Play" ID="{78585EE2-3DD3-4A9B-BC31-F0A577B1FA05}">
+					<ChildrenList>
+						<Action Name="" ID="{06D2287E-C3D5-44F9-88BA-12219F693B4A}" ShortID="299812582">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerAmbienceMain_Stop" ID="{09353F2E-02D9-43C4-B6A4-6397D6282765}">
+					<ChildrenList>
+						<Action Name="" ID="{675C60BC-23E8-4634-82B6-A63D4ED5E8F6}" ShortID="394304429">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerBootUp_Play" ID="{1331BB4F-FA30-472F-8FFE-C971DC700E80}">
+					<ChildrenList>
+						<Action Name="" ID="{734FF3EC-0D15-4566-BCFA-6E01C072F70B}" ShortID="1035537590">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ComputerBootUp_Stop" ID="{2003AD53-06BA-44AE-8DC4-BD1CD5DA5747}">
+					<ChildrenList>
+						<Action Name="" ID="{A0B8D936-73D7-42A0-A902-993D25D5B4C8}" ShortID="397313616">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="HospitalAmbience2D_Play" ID="{134C1816-BD5B-40F0-B136-B36E1107C319}">
+					<ChildrenList>
+						<Action Name="" ID="{D3A9D264-2746-4E98-9C15-B838DC5F3CD4}" ShortID="36435503">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HospitalAmbience" ID="{73465AE9-ED4F-496C-8B7D-71E0D1C4104D}" WorkUnitID="{A124AEDC-3F77-4134-802B-61F617E69798}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="HospitalAmbience2D_Stop" ID="{3F3A727F-0DE7-4328-A79B-E1E6316AD0ED}">
+					<ChildrenList>
+						<Action Name="" ID="{152E0844-2BF2-4C13-8D82-6C05CB5B7B5F}" ShortID="66986589">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HospitalAmbience" ID="{73465AE9-ED4F-496C-8B7D-71E0D1C4104D}" WorkUnitID="{A124AEDC-3F77-4134-802B-61F617E69798}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EB3DD708-1CDD-4AB1-BEE5-497A7F4AFEA4}" SchemaVersion="119" RootDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" ParentDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}">
+	<Events>
+		<WorkUnit Name="Music" ID="{EB3DD708-1CDD-4AB1-BEE5-497A7F4AFEA4}" OwnerID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Gary_MusicLayers_Play" ID="{6C0A76EF-3EAD-4DD2-BFBE-DB3199E9D1C6}">
+					<ChildrenList>
+						<Action Name="" ID="{7C5176EC-E939-47B8-9F5B-6731A894AFBF}" ShortID="38638032">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Layers" ID="{BA36825F-4D76-4151-AEDF-34FE81BE7A97}" WorkUnitID="{0F43A6CE-83E1-46C0-B728-E13A9DE3E125}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gary_MusicLayers_Stop" ID="{1F1DF454-7E7D-4429-9475-B60900971CEF}">
+					<ChildrenList>
+						<Action Name="" ID="{25435F27-9A5C-4F89-A939-F03047974068}" ShortID="959166504">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Layers" ID="{BA36825F-4D76-4151-AEDF-34FE81BE7A97}" WorkUnitID="{0F43A6CE-83E1-46C0-B728-E13A9DE3E125}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

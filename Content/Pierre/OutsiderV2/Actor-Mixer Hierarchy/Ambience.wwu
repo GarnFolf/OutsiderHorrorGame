@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A124AEDC-3F77-4134-802B-61F617E69798}" SchemaVersion="119" RootDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" ParentDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}">
+	<AudioObjects>
+		<WorkUnit Name="Ambience" ID="{A124AEDC-3F77-4134-802B-61F617E69798}" OwnerID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="HospitalAmbience" ID="{73465AE9-ED4F-496C-8B7D-71E0D1C4104D}" ShortID="254771738">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HospitalAmbience" ID="{A53CAE92-06D1-4BA6-B7AA-88BF26072CC6}">
+							<PropertyList>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>0.6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>HospitalAmbience.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="296636876"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{9FB3CB2D-032F-4F04-B43A-0DE06ACD930F}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="OnComputer" ID="{E47A6EBF-4AE8-40E7-8D42-A166047E086C}"/>
+								<CustomState Name="" ID="{C1025DA5-3778-405F-B597-AD74CD3FC4E1}" ShortID="517985612">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="OffComputer" ID="{45750615-EC22-43C5-A906-9FC1036B25B2}"/>
+								<CustomState Name="" ID="{B9E4C549-54C2-44CB-81A6-7B0104FA050F}" ShortID="224970461"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="HospitalAmbience" ID="{A53CAE92-06D1-4BA6-B7AA-88BF26072CC6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

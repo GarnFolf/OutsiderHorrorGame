@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{95BCA0A1-EC6B-48A2-9619-694DAAFE7E34}" SchemaVersion="119" RootDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" ParentDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}">
+	<AudioObjects>
+		<WorkUnit Name="Enemy" ID="{95BCA0A1-EC6B-48A2-9619-694DAAFE7E34}" OwnerID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="LoudBang" ID="{FF06DAA3-256D-471A-84C1-7D78DA098AC8}" ShortID="315473516">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F91A8E3D-64F6-4A02-BB96-F2394556526D}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>33</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{48642007-5C59-4BE7-A5B5-A66DA6B6C084}">
+										<PropertyList>
+											<Property Name="Min" Type="Real64" Value="-32"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>740</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0F12F8F7-C38B-49F1-9240-F234AFEFE7E3}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-23</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume1" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-24</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemy" ID="{685DE49A-D0E9-451E-B848-026D0B677CB5}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Distortion" ID="{C9518497-6747-40E1-A0D4-B1E6B6CA8D53}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend1">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="LoudBang" ID="{420900D5-65B1-49B2-8F59-8F7B8728C473}">
+							<Language>SFX</Language>
+							<AudioFile>LoudBang.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="389980662"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="LoudBang" ID="{420900D5-65B1-49B2-8F59-8F7B8728C473}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
