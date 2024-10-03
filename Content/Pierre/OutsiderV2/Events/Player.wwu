@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FB154C80-2940-49CE-B21C-F2AE6DD51366}" SchemaVersion="119" RootDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" ParentDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}">
+	<Events>
+		<WorkUnit Name="Player" ID="{FB154C80-2940-49CE-B21C-F2AE6DD51366}" OwnerID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Footsteps" ID="{09E2E6F3-5668-41D4-ACF6-C43D0A452893}">
+					<ChildrenList>
+						<Action Name="" ID="{489093BB-3A7D-4433-AD66-00BF4DB03994}" ShortID="192105333">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MaterialType" ID="{9AC1D6C1-6294-4D5A-94D9-520A2F80E652}" WorkUnitID="{7E685964-9B96-4C46-BAF8-883758973D3E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8CD386A8-96A5-4411-8762-A03D66C23BCF}" ShortID="691743562">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WheelchairL" ID="{635FF353-5EFF-4458-BA9B-A10096E2A7DF}" WorkUnitID="{7E685964-9B96-4C46-BAF8-883758973D3E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{30DC1414-FF7A-47D6-A3EA-46C94E73F6AD}" ShortID="659979808">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WheelchairR" ID="{47844426-9E4F-474D-A15E-270390221E52}" WorkUnitID="{7E685964-9B96-4C46-BAF8-883758973D3E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C97CAC45-2B4C-4661-A9E9-7C695CE38086}" ShortID="258415534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WheelchairAmbience" ID="{1A189111-FB64-4087-B582-389A9A9FB569}" WorkUnitID="{7E685964-9B96-4C46-BAF8-883758973D3E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

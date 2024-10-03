@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{43E64194-E3D3-4B45-A636-0DD6E75136DA}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{43E64194-E3D3-4B45-A636-0DD6E75136DA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GroundMaterialType" ID="{9B793E32-F5CD-4B2A-8FD2-052995817CC3}">
+					<ChildrenList>
+						<Switch Name="Tile" ID="{92B4A54D-93C2-4E74-9B5F-00E6AE4E44C3}"/>
+						<Switch Name="Glass" ID="{3E93048F-A6BF-4AD1-9409-173608C21DDC}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerMovementType" ID="{D7457933-771C-41D4-86DA-1AAB54E35AEC}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Sneak" ID="{8C7C10E4-2832-405A-AC02-C479D467BFD2}"/>
+						<Switch Name="Walk" ID="{488329EA-5B92-474F-B298-D0AF99297EF0}"/>
+						<Switch Name="Run" ID="{9BF39534-F7FB-4F66-90F4-1D2CD5ABDF3B}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}"/>
+						<Curve Name="" ID="{1A751CE9-EED4-4325-841F-C608CE7CFEE3}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerMovementTypeTransition" ID="{D7E0B2C2-1F43-46D5-996A-6615A2566A41}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Sneak" ID="{7C925CAB-0E10-4223-8B99-2610F59744C6}"/>
+						<Switch Name="Walk" ID="{9A1BF701-5BE3-46E4-B538-240C59F2DBFF}"/>
+						<Switch Name="Run" ID="{557712B1-8813-4D0C-984C-D8A04C1E054A}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="PlayerSpeed02" ID="{003A09DF-3BA9-449C-B5A2-84C93CE0207E}"/>
+						<Curve Name="" ID="{C900D5F4-6C0D-49BC-B50D-23EF0F8DA987}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

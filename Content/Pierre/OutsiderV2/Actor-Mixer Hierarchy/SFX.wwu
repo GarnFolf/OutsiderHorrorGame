@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}" SchemaVersion="119" RootDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" ParentDocumentID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}">
+	<AudioObjects>
+		<WorkUnit Name="SFX" ID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}" OwnerID="{7F58FD81-617A-4BBA-BABE-DF961DEDED0A}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Keystrokes" ID="{BF4CD5EA-4CAA-4BB7-8463-D0263E592508}" ShortID="303609744">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{B0B0E4BB-0A3A-4F2B-81EC-A540B7AD8E24}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="16"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{72C3B5A8-4DA8-461D-BC27-E38B94101D84}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="12"/>
+											<Property Name="Min" Type="Real64" Value="-12"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{46278C30-79D0-46CC-B057-B5222B8D8419}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="45"/>
+											<Property Name="Min" Type="Real64" Value="-45"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-26</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{AAD783F9-11F0-4581-8A60-A795A2C040D4}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Keystroke1" ID="{5EC97BD5-CA8E-4288-AFE1-72F5AE4A4C72}" ShortID="27171279">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke1" ID="{D4E35B2A-A8D6-43B7-B145-D3FB64654F41}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0234766277128547"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0234766277128547"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="101774091"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke1" ID="{D4E35B2A-A8D6-43B7-B145-D3FB64654F41}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke2" ID="{6465694C-D9FB-4378-8EFC-AA22FC24969A}" ShortID="309444900">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke2" ID="{6811ECBE-01C8-4217-93D8-EC1A72A05A47}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0575959933222037"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0575959933222037"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="917461047"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke2" ID="{6811ECBE-01C8-4217-93D8-EC1A72A05A47}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke3" ID="{9F5516B3-935D-4BB0-B09A-5BCE1F6420BE}" ShortID="611167193">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke3" ID="{B32E0598-0A53-4F79-9B26-0C4F99040EC1}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0388146911519198"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0388146911519198"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="711882645"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke3" ID="{B32E0598-0A53-4F79-9B26-0C4F99040EC1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke4" ID="{79DE3708-1630-4359-96E4-6C45FE412773}" ShortID="933456349">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke4" ID="{545D7BE9-0CFA-4255-98DA-205E6BD5BD57}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0342237061769616"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0342237061769616"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="626398613"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke4" ID="{545D7BE9-0CFA-4255-98DA-205E6BD5BD57}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke5" ID="{29E96B24-9058-4183-B465-5058116C84E0}" ShortID="443724593">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke5" ID="{6B72E2D6-3CFE-48D3-AD4B-920FE36C653C}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0690560656649972"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0690560656649972"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="734286564"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke5" ID="{6B72E2D6-3CFE-48D3-AD4B-920FE36C653C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke6" ID="{C7C01D19-ABD4-416A-A8D8-0408245031AF}" ShortID="256800920">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke6" ID="{336311A6-FE6D-4051-88AC-AC33B5F24EF0}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0711950473010574"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0711950473010574"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="884918592"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke6" ID="{336311A6-FE6D-4051-88AC-AC33B5F24EF0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke7" ID="{E4B83DE4-A263-404D-B926-3E6DC51B9092}" ShortID="295001361">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke7" ID="{95080B04-59C7-41DB-B258-125D460E9863}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0532136894824708"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0532136894824708"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="906625738"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke7" ID="{95080B04-59C7-41DB-B258-125D460E9863}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke8" ID="{26A31726-342A-4DC8-A199-8A43B1264144}" ShortID="899436672">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke8" ID="{5DD77A79-1344-4CE3-BFE4-5DF27BF78075}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.0353366722314969"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0353366722314969"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke8.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="918678374"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke8" ID="{5DD77A79-1344-4CE3-BFE4-5DF27BF78075}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Keystroke9" ID="{44596CDA-85F3-4A19-B056-1B9D27A33962}" ShortID="774657088">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Keystroke9" ID="{7B9B6520-CF80-473F-BE27-8E3E89B025AE}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.042088376460768"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.042088376460768"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Keystroke9.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="150121067"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Keystroke9" ID="{7B9B6520-CF80-473F-BE27-8E3E89B025AE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<BlendContainer Name="KeyScroll" ID="{8EAB99C7-04FD-48D4-955F-41725282E26B}" ShortID="589873238">
+					<PropertyList>
+						<Property Name="BlendBehavior" Type="int16" Value="1"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>23</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-31</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="KeyboardScrollLong" ID="{F2187772-2951-404B-9E43-27A1F8A34327}" ShortID="877843964">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KeyboardScrollLong" ID="{2D192D65-88DB-4DE6-BD42-00CBC192DE10}">
+									<Language>SFX</Language>
+									<AudioFile>KeyboardScrollLong.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="48360520"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KeyboardScrollLong" ID="{2D192D65-88DB-4DE6-BD42-00CBC192DE10}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="KeyScrollSlow" ID="{CEE0EF33-93FD-48A1-AC0F-38F02A7D16BE}" ShortID="904412842">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>24</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KeyScrollSlow" ID="{871FBE0D-2625-4335-A786-ED1828F1F87E}">
+									<Language>SFX</Language>
+									<AudioFile>KeyScrollSlow.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="794983980"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KeyScrollSlow" ID="{871FBE0D-2625-4335-A786-ED1828F1F87E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<BlendTrackList>
+						<BlendTrack Name="KeyScrollSpeed" ID="{E740A7B7-0431-42D9-99D6-25C5FA18EB82}" ShortID="353997066">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="KeyScrollSpeed" ID="{68F1960B-BC7E-49B1-9EC0-C7E048E329FB}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{BEF3A734-E707-4366-826C-CAE6AEC23C98}" ShortID="969285188">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="KeyScrollSpeed" ID="{68F1960B-BC7E-49B1-9EC0-C7E048E329FB}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{B9ABEAC4-E155-4F2F-9D31-3EB96630120A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="KeyScrollSlow" ID="{CEE0EF33-93FD-48A1-AC0F-38F02A7D16BE}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>60</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="KeyboardScrollLong" ID="{F2187772-2951-404B-9E43-27A1F8A34327}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>40</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>100</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
+				<BlendContainer Name="ComputerBootUp" ID="{07D6AF19-73AE-4751-BE77-EA19C30ED766}" ShortID="917298241">
+					<PropertyList>
+						<Property Name="BlendBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="ComputerBootUp" ID="{9399A36A-9270-42B5-AACC-2B0A290202FB}" ShortID="485581956">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="7"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-28</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{AAD783F9-11F0-4581-8A60-A795A2C040D4}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ComputerBoot" ID="{DB56C2CC-2B75-4254-91F3-5591CC31898E}" ShortID="437555103">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ComputerBootUp" ID="{99477BAB-A18F-4731-A2F3-C33AA77D2353}">
+											<Language>SFX</Language>
+											<AudioFile>ComputerBootUp.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="3521534"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ComputerBootUp" ID="{99477BAB-A18F-4731-A2F3-C33AA77D2353}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ComputerAmbience" ID="{02517512-6872-4F6F-A7AA-3AE31AC53A81}" ShortID="359692299">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ComputerAmbience" ID="{13DB2A9B-CC59-44C9-BC72-DFFBC7F2ABFA}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.467445742904842"/>
+												<Property Name="TrimEnd" Type="Real64" Value="19.7662771285476"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ComputerAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="45336510"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ComputerAmbience" ID="{13DB2A9B-CC59-44C9-BC72-DFFBC7F2ABFA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="ComputerBoot" ID="{DB56C2CC-2B75-4254-91F3-5591CC31898E}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="ComputerAmbience" ID="{02517512-6872-4F6F-A7AA-3AE31AC53A81}" WorkUnitID="{F47A6924-1B49-477D-972E-EFFEF3C20F55}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<Sound Name="ComputerMusicAmbient" ID="{5FCA1FFB-64A5-4596-97FD-0CAA2C7115A8}" ShortID="1011313317">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CB8558D2-1C4D-4AEB-BB20-E39CD521819D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ComputerMusicAmbient" ID="{623F3134-F477-4C16-AA61-B6F63C435903}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ComputerMusicAmbient.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="698832533"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ComputerMusicAmbient" ID="{623F3134-F477-4C16-AA61-B6F63C435903}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="ComputerAmbience" ID="{47EE416F-72A4-423B-A419-072F49DD5B4C}" ShortID="88039106">
+					<PropertyList>
+						<Property Name="BlendBehavior" Type="int16" Value="1"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EA8B5BE9-CD26-4BE0-93E8-8928547D101C}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ComputerMusicAmbient" ID="{26DF6B69-83F6-49E2-B3C0-AFF25AEFA2EE}" ShortID="498470819">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ComputerMusicAmbient" ID="{9D02B359-FDA1-4009-9B5E-B4BE65382848}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ComputerMusicAmbient.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="698832533"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ComputerMusicAmbient" ID="{9D02B359-FDA1-4009-9B5E-B4BE65382848}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ComputerAmbience" ID="{48F8942A-2387-4D4D-899D-D020D37ED5B4}" ShortID="128101411">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ComputerAmbience" ID="{05D4F9B2-12B6-4E62-948F-4AAA32287414}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.467445742904842"/>
+										<Property Name="TrimEnd" Type="Real64" Value="19.7662771285476"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ComputerAmbience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="45336510"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ComputerAmbience" ID="{05D4F9B2-12B6-4E62-948F-4AAA32287414}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<BlendContainer Name="ComputerLoading" ID="{578321FA-1246-40B4-A944-CE3A885C01F5}" ShortID="879328074">
+					<PropertyList>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-25</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{AAD783F9-11F0-4581-8A60-A795A2C040D4}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ComputerLoading" ID="{74BE7D19-FC1D-4455-B2F3-186E1D2D83AF}" ShortID="666303922">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="KeyboardLoading2_0" ID="{33541152-38B1-481F-880E-2A7EA51911D1}">
+									<Language>SFX</Language>
+									<AudioFile>KeyboardLoading2.0.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="8848020"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="KeyboardLoading2_0" ID="{33541152-38B1-481F-880E-2A7EA51911D1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<RandomSequenceContainer Name="Mouseclicks" ID="{2E707F13-0B05-4921-8156-32554EA2E8D1}" ShortID="972122801">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CF741605-52AE-4BD2-BA78-E00B3BF03930}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="10"/>
+											<Property Name="Min" Type="Real64" Value="-10"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-27</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{AAD783F9-11F0-4581-8A60-A795A2C040D4}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="MouseClick1" ID="{55CCA43E-AF27-494B-BF43-B21CBFE59749}" ShortID="619978242">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MouseClick1" ID="{98AEC84E-DC27-4167-8F58-5BFF6525A406}">
+									<Language>SFX</Language>
+									<AudioFile>MouseClick1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1568450"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MouseClick1" ID="{98AEC84E-DC27-4167-8F58-5BFF6525A406}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MouseClick2" ID="{54338E28-7BD3-4623-8CC0-33207EBCC29A}" ShortID="469148226">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>41</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MouseClick2" ID="{0A2C8222-B452-4927-9942-9EDC58D4E822}">
+									<Language>SFX</Language>
+									<AudioFile>MouseClick2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="443770630"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MouseClick2" ID="{0A2C8222-B452-4927-9942-9EDC58D4E822}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MouseClick3" ID="{98E0BC31-30D4-4836-A640-46E16D15CACF}" ShortID="937421321">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>42</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MouseClick3" ID="{F836B61C-4A51-401E-BDCC-5F1D973CAD35}">
+									<Language>SFX</Language>
+									<AudioFile>MouseClick3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="29567978"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MouseClick3" ID="{F836B61C-4A51-401E-BDCC-5F1D973CAD35}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MouseClick4" ID="{B26D0F9A-3224-44CF-89E4-6511FCDC74A6}" ShortID="362558332">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>43</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MouseClick4" ID="{4B1DBC23-4088-498E-908B-011F29278F69}">
+									<Language>SFX</Language>
+									<AudioFile>MouseClick4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1045539539"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MouseClick4" ID="{4B1DBC23-4088-498E-908B-011F29278F69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MouseClick5" ID="{F9618C73-D999-4842-B911-049611235CDD}" ShortID="630146264">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>44</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MouseClick5" ID="{1E8AC93D-8C32-47CE-962E-1DD617666E20}">
+									<Language>SFX</Language>
+									<AudioFile>MouseClick5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="180458737"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MouseClick5" ID="{1E8AC93D-8C32-47CE-962E-1DD617666E20}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
