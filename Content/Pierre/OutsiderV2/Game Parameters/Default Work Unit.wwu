@@ -19,6 +19,7 @@
 						<Property Name="SlewRateUp" Type="Real64" Value="2"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

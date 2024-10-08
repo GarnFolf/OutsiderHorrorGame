@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{78F08013-A3B2-47D6-BD7A-FD9702C524F8}" SchemaVersion="119" RootDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" ParentDocumentID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}">
+	<Events>
+		<WorkUnit Name="Dialogue" ID="{78F08013-A3B2-47D6-BD7A-FD9702C524F8}" OwnerID="{E6BC4111-20A7-4283-B1D5-2B79A5C73755}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="ThatMonster_Play" ID="{056F469D-F592-4A9A-9AE1-D647AEBF45BF}">
+					<ChildrenList>
+						<Action Name="" ID="{4282E954-32C6-484F-8935-D87DF2CBB8BB}" ShortID="779423776">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue1" ID="{66BCAEBD-DA8B-4C3A-911C-B1769A056635}" WorkUnitID="{A20B61E7-D7F3-4F08-8B2A-8E80E4AC74C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TheThingisHere_Play" ID="{D58211C0-7D1E-4D4A-AF7D-3919402F3AE9}">
+					<ChildrenList>
+						<Action Name="" ID="{F01A60EB-3006-4926-AA22-DEAC31126BE3}" ShortID="53238071">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue2" ID="{4145522E-4800-486E-8091-4AF4998B1C65}" WorkUnitID="{A20B61E7-D7F3-4F08-8B2A-8E80E4AC74C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ImUnderTheDesk_Play" ID="{6621B090-490C-4654-ACBA-7E7785DF0DDC}">
+					<ChildrenList>
+						<Action Name="" ID="{E762B3B9-419A-4F51-BE00-471FFE5BC950}" ShortID="108474984">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue3" ID="{C3D9C169-9020-43B9-BED4-CFAA9FCB5E83}" WorkUnitID="{A20B61E7-D7F3-4F08-8B2A-8E80E4AC74C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

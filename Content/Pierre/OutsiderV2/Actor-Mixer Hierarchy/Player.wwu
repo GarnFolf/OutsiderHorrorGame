@@ -21,6 +21,21 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume1" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -34,6 +49,12 @@
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
 									<ObjectRef Name="GroundMaterialType" ID="{9B793E32-F5CD-4B2A-8FD2-052995817CC3}" WorkUnitID="{43E64194-E3D3-4B45-A636-0DD6E75136DA}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Distortion" ID="{C9518497-6747-40E1-A0D4-B1E6B6CA8D53}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4787,6 +4808,11 @@
 													<ChildrenList>
 														<RandomSequenceContainer Name="Sneak" ID="{9A21DE03-D783-4F8A-8BBB-DA9C0B0A0847}" ShortID="775622255">
 															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>-430</Value>
+																	</ValueList>
+																</Property>
 																<Property Name="Volume" Type="Real64">
 																	<ValueList>
 																		<Value>-5</Value>
@@ -5342,6 +5368,45 @@
 									</CustomState>
 								</CustomStateList>
 							</StateInfo>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{87C9D2D6-FF9A-402E-92B0-13B3D2DC09C7}" ShortID="456330615">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="UserAuxSendVolume0"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="GaryProximityFromPlayer" ID="{86F4B50B-8B7C-4B65-9AF8-09C72D2D5F47}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{6B0C2A68-B19E-42EF-BEB3-BF1833239AB1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
@@ -5403,64 +5468,344 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="WheelchairL1" ID="{A6EE2700-211C-4CD3-8EA6-41D76A5020C9}" ShortID="433680584">
+						<BlendContainer Name="WheelchairAmbience" ID="{1A189111-FB64-4087-B582-389A9A9FB569}" ShortID="491480106">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+									<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WheelchairL1" ID="{44D887E4-6E62-47D2-A250-82CB4FA19FAE}">
+								<Sound Name="WheelChairAmbienceFasrt" ID="{D85F81C0-48B4-4E46-B0FA-16CAFBD33F90}" ShortID="1054488992">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceFasrt" ID="{5B019F2D-7491-4A2D-90F7-08DD970EB793}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.5559265442404"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.95826377295492"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.95826377295492"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceFasrt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="794222196"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceFasrt" ID="{5B019F2D-7491-4A2D-90F7-08DD970EB793}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelChairAmbienceSlow" ID="{CD54FBE0-99DC-4A4D-9977-FAD04434EECE}" ShortID="473394372">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceSlow" ID="{C79A67C7-9064-4460-9D59-7C32A4BC7577}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.2237061769616"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.40901502504173"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceSlow.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="687876239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceSlow" ID="{C79A67C7-9064-4460-9D59-7C32A4BC7577}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelchairL1" ID="{A6EE2700-211C-4CD3-8EA6-41D76A5020C9}" ShortID="433680584">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.616601736111111"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.858499340277778"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.346245590277778"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.01581336805556"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>WheelchairL1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="158020103"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelchairL1" ID="{44D887E4-6E62-47D2-A250-82CB4FA19FAE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.407557356589686"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.858499340277778"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.346245590277778"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.50270443650297"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelchairL1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="158020103"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelchairL1" ID="{44D887E4-6E62-47D2-A250-82CB4FA19FAE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WheelchairL1" ID="{44D887E4-6E62-47D2-A250-82CB4FA19FAE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="WheelchairL2" ID="{E4DEECAD-6F23-4296-ADD0-416CEBDDDB84}" ShortID="1031972944">
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
+										<CustomState Name="" ID="{6C9EA8B6-1C24-479F-B286-BA8B87DC2422}" ShortID="37212391"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
+										<CustomState Name="" ID="{503A4809-13A6-41C1-91C4-A36EF73A099E}" ShortID="649638695">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<BlendTrackList>
+								<BlendTrack Name="WheelchairAmbience" ID="{89D14B4D-6454-44D0-AB20-659D54674CEE}" ShortID="1072403205">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceSlow" ID="{CD54FBE0-99DC-4A4D-9977-FAD04434EECE}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>2</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceFasrt" ID="{D85F81C0-48B4-4E46-B0FA-16CAFBD33F90}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.1</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>3</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="WheelchairAmbience_01" ID="{C81B18CC-157E-4624-94E7-E3F923143390}" ShortID="115672135">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+									<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WheelchairL2" ID="{4D9EDC41-3226-4FAA-BD5E-5AB0B9404E73}">
+								<Sound Name="WheelChairAmbienceFasrt" ID="{65EB6FAA-A2B8-4EF7-860C-5BA4B750AF98}" ShortID="356333427">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceFasrt" ID="{6CBAA36A-A142-4FCD-B03D-B5E222118055}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.5559265442404"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.95826377295492"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.95826377295492"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceFasrt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="794222196"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceFasrt" ID="{6CBAA36A-A142-4FCD-B03D-B5E222118055}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelChairAmbienceSlow" ID="{0EBC6A72-3452-463E-8234-8E37CACE3408}" ShortID="1006539888">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceSlow" ID="{AC037E7D-2FD3-4AD5-94E1-51BBD3B2902E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.2237061769616"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.40901502504173"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceSlow.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="687876239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceSlow" ID="{AC037E7D-2FD3-4AD5-94E1-51BBD3B2902E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelchairL2" ID="{E4DEECAD-6F23-4296-ADD0-416CEBDDDB84}" ShortID="1031972944">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.787352986111111"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.844270069444444"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.294071597222222"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.01107027777778"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>WheelchairL2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="235721115"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelchairL2" ID="{4D9EDC41-3226-4FAA-BD5E-5AB0B9404E73}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.407272296072157"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.844270069444444"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.294071597222222"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.40294117371545"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelchairL2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="235721115"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelchairL2" ID="{4D9EDC41-3226-4FAA-BD5E-5AB0B9404E73}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WheelchairL2" ID="{4D9EDC41-3226-4FAA-BD5E-5AB0B9404E73}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
+										<CustomState Name="" ID="{DC5C2840-CE06-451C-AA37-5C13C18435F7}" ShortID="191088310"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
+										<CustomState Name="" ID="{2E27DBE4-3C12-48B3-86DA-E1DAE9EF6E21}" ShortID="137266787">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<BlendTrackList>
+								<BlendTrack Name="WheelchairAmbience" ID="{1842B36E-6AA7-4D71-AA38-A2995E8303A6}" ShortID="175746759">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceSlow" ID="{0EBC6A72-3452-463E-8234-8E37CACE3408}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>2</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceFasrt" ID="{65EB6FAA-A2B8-4EF7-860C-5BA4B750AF98}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.1</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>3</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
@@ -5518,40 +5863,11 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="WheelchairR1" ID="{AC29F4C2-EA31-41E1-86F9-D66FA41A3EB4}" ShortID="995989492">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="WheelchairR1" ID="{299682BC-E36A-405B-98FD-17E174A0D4D5}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.577153263888889"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.940714375"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.604420347222222"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.22681180555556"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>WheelchairR1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="119375437"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WheelchairR1" ID="{299682BC-E36A-405B-98FD-17E174A0D4D5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="WheelchairR2" ID="{487AFF50-8F57-4206-8F01-669D19B985BB}" ShortID="9763923">
+						<BlendContainer Name="WheelchairAmbience" ID="{163C47B2-6F2B-40CE-8E0B-1237F9D3FA24}" ShortID="263082849">
 							<PropertyList>
-								<Property Name="Volume" Type="Real64">
+								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -5560,30 +5876,337 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+									<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WheelchairR2" ID="{4BD273FC-626F-474F-9362-84F235897806}">
+								<Sound Name="WheelChairAmbienceFasrt" ID="{9B6B9B37-9FC1-4B49-BE2D-2520E629D427}" ShortID="846430692">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceFasrt" ID="{7FA11B52-9E74-4D40-9BD5-23DCC5A4D51D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.5559265442404"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.95826377295492"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.95826377295492"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceFasrt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="794222196"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceFasrt" ID="{7FA11B52-9E74-4D40-9BD5-23DCC5A4D51D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelChairAmbienceSlow" ID="{F9DF191C-0267-4F4E-B788-89F38781B8E8}" ShortID="502158147">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceSlow" ID="{895BCA51-7A13-48E2-8A87-F38ECC2ABB18}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.2237061769616"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.40901502504173"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceSlow.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="687876239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceSlow" ID="{895BCA51-7A13-48E2-8A87-F38ECC2ABB18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelchairR1" ID="{AC29F4C2-EA31-41E1-86F9-D66FA41A3EB4}" ShortID="995989492">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.696248680555555"/>
-										<Property Name="FadeInShape" Type="int16" Value="8"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.706055"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.181416909722222"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.70629958333333"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>WheelchairR2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="293842613"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelchairR1" ID="{299682BC-E36A-405B-98FD-17E174A0D4D5}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.363204529887776"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.80870345402059"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.604420347222222"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.76704963248934"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelchairR1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="119375437"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelchairR1" ID="{299682BC-E36A-405B-98FD-17E174A0D4D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WheelchairR2" ID="{4BD273FC-626F-474F-9362-84F235897806}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
+										<CustomState Name="" ID="{BB5E885D-AA74-40D0-924A-A4E5D93A77FC}" ShortID="1060343433"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
+										<CustomState Name="" ID="{F7A9EC6A-617C-4878-9B59-2AFD6173A069}" ShortID="841713194">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<BlendTrackList>
+								<BlendTrack Name="WheelchairAmbience" ID="{F72468BD-9BBA-43DA-9AF3-05A828BD3B61}" ShortID="863709150">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceSlow" ID="{F9DF191C-0267-4F4E-B788-89F38781B8E8}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>2</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceFasrt" ID="{9B6B9B37-9FC1-4B49-BE2D-2520E629D427}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.1</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>3</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="WheelchairAmbience_01" ID="{77FC350F-8AF8-4293-8B72-3F54EBB69D2A}" ShortID="770740268">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="WheelChairAmbienceFasrt" ID="{1AE01C64-220C-4994-AFDD-165CC777BF6C}" ShortID="1069797277">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceFasrt" ID="{5BB720CC-FE53-4B33-A417-4F227579607F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.5559265442404"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.95826377295492"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.95826377295492"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceFasrt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="794222196"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceFasrt" ID="{5BB720CC-FE53-4B33-A417-4F227579607F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelChairAmbienceSlow" ID="{F68DE648-FC53-47C1-BF55-15CE80F14D55}" ShortID="947479354">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelChairAmbienceSlow" ID="{3E14EE3D-9BA6-466F-86C7-B498EA212D87}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.2237061769616"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.40901502504173"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelChairAmbienceSlow.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="687876239"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelChairAmbienceSlow" ID="{3E14EE3D-9BA6-466F-86C7-B498EA212D87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WheelchairR2" ID="{FA06EEC0-2489-46B5-9D08-AC2E31ED1A73}" ShortID="883446890">
+									<PropertyList>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WheelchairR2" ID="{DF799233-4B49-48D1-B46B-79F7DEDDB541}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.396656617394731"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.01055840845854"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.181416909722222"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.51475711672231"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WheelchairR2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="293842613"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WheelchairR2" ID="{DF799233-4B49-48D1-B46B-79F7DEDDB541}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
+										<CustomState Name="" ID="{6D275AEC-70EB-4841-B8A9-61DEDCF00989}" ShortID="287220866"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
+										<CustomState Name="" ID="{3F7ACB95-F6A1-4760-B49F-4ED9F849772A}" ShortID="859288613">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<BlendTrackList>
+								<BlendTrack Name="WheelchairAmbience" ID="{3BEAD529-3821-4E9A-9DF0-C27458272F16}" ShortID="87016783">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceSlow" ID="{F68DE648-FC53-47C1-BF55-15CE80F14D55}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>2</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="WheelChairAmbienceFasrt" ID="{1AE01C64-220C-4994-AFDD-165CC777BF6C}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>1.1</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>3</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
@@ -5607,30 +6230,33 @@
 						</CustomStateList>
 					</StateInfo>
 				</RandomSequenceContainer>
-				<BlendContainer Name="WheelchairAmbience" ID="{1A189111-FB64-4087-B582-389A9A9FB569}" ShortID="491480106">
+				<RandomSequenceContainer Name="PickupPutdown" ID="{42612567-FB24-4121-A519-C506A2456794}" ShortID="234608518">
 					<PropertyList>
-						<Property Name="UserAuxSendVolume0" Type="Real64">
-							<ValueList>
-								<Value>-8</Value>
-							</ValueList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6FDD4191-4EB5-4150-B5E0-A320EEE33398}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="15"/>
+											<Property Name="Min" Type="Real64" Value="-15"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Player" ID="{BEAA0627-6202-4558-A981-42E0EA507B3C}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb" ID="{DB536A37-6BD8-45B5-8C1D-43E5FDD8FE5D}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="WheelChairAmbienceFasrt" ID="{D85F81C0-48B4-4E46-B0FA-16CAFBD33F90}" ShortID="1054488992">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
+						<Sound Name="PickUpPutDown1" ID="{324D31D5-06AF-4872-9EB9-4419D65DB535}" ShortID="192909723">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
@@ -5640,22 +6266,24 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WheelChairAmbienceFasrt" ID="{5B019F2D-7491-4A2D-90F7-08DD970EB793}">
+								<AudioFileSource Name="PickUpPutDown1" ID="{7D26BC32-BB11-4667-8EBC-3D0FACE61162}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0703338898163606"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.30419407345576"/>
+									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>WheelChairAmbienceFasrt.wav</AudioFile>
+									<AudioFile>PickUpPutDown1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1059516175"/>
+										<MediaID ID="160417420"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="WheelChairAmbienceFasrt" ID="{5B019F2D-7491-4A2D-90F7-08DD970EB793}" Platform="Linked"/>
+								<ActiveSource Name="PickUpPutDown1" ID="{7D26BC32-BB11-4667-8EBC-3D0FACE61162}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="WheelChairAmbienceSlow" ID="{CD54FBE0-99DC-4A4D-9977-FAD04434EECE}" ShortID="473394372">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
+						<Sound Name="PickUpPutDown2" ID="{7DC5FA83-CA66-4749-8881-DD776BFCFBBF}" ShortID="344457330">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
@@ -5665,73 +6293,79 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WheelChairAmbienceSlow" ID="{C79A67C7-9064-4460-9D59-7C32A4BC7577}">
+								<AudioFileSource Name="PickUpPutDown2" ID="{0A608CCE-5B45-4904-8DC7-7D61A6C23BB6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.215544449081803"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.424135851419032"/>
+									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>WheelChairAmbienceSlow.wav</AudioFile>
+									<AudioFile>PickUpPutDown2.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="70430166"/>
+										<MediaID ID="695963605"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="WheelChairAmbienceSlow" ID="{C79A67C7-9064-4460-9D59-7C32A4BC7577}" Platform="Linked"/>
+								<ActiveSource Name="PickUpPutDown2" ID="{0A608CCE-5B45-4904-8DC7-7D61A6C23BB6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PickUpPutDown3" ID="{06FC23E6-0AA7-4A61-AA1F-E970FCD343E4}" ShortID="360715546">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PickUpPutDown3" ID="{9FEE18D3-ED7A-4C03-AF3B-19AAEBAF9A9B}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0765795422927101"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PickUpPutDown3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="885878667"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PickUpPutDown3" ID="{9FEE18D3-ED7A-4C03-AF3B-19AAEBAF9A9B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PickUpPutDown4" ID="{66092558-FCDD-43C7-A996-C02427BFC5DB}" ShortID="777729308">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{625BFD84-A679-489D-B9F1-77321A9180C8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A9512035-0B17-47C4-ACD1-62510B2637A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PickUpPutDown4" ID="{236B670A-5F9B-4240-B766-7213FB0D9686}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.210915414579855"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.2920367278798"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PickUpPutDown4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="988065598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PickUpPutDown4" ID="{236B670A-5F9B-4240-B766-7213FB0D9686}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="LocomotionType" ID="{357BA19C-C3E3-4E7C-B60B-D7025145BB13}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="Wheelchair" ID="{19830DD9-75D7-4053-BFE6-2BC27E46E258}"/>
-								<CustomState Name="" ID="{6C9EA8B6-1C24-479F-B286-BA8B87DC2422}" ShortID="37212391"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Walking" ID="{47067730-5717-439D-A285-A850007A8139}"/>
-								<CustomState Name="" ID="{503A4809-13A6-41C1-91C4-A36EF73A099E}" ShortID="649638695">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-108"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<BlendTrackList>
-						<BlendTrack Name="WheelchairAmbience" ID="{89D14B4D-6454-44D0-AB20-659D54674CEE}" ShortID="1072403205">
-							<PropertyList>
-								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="LayerCrossFadeControlInput">
-									<ObjectRef Name="PlayerSpeed" ID="{BF9690B9-821C-4329-B7AF-950AF4B15CDE}" WorkUnitID="{44D06862-C20A-419B-92FE-DE6A7B508116}"/>
-								</Reference>
-							</ReferenceList>
-							<BlendTrackAssocList>
-								<BlendTrackAssoc>
-									<ItemRef Name="WheelChairAmbienceSlow" ID="{CD54FBE0-99DC-4A4D-9977-FAD04434EECE}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>0</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>2</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="WheelChairAmbienceFasrt" ID="{D85F81C0-48B4-4E46-B0FA-16CAFBD33F90}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>1.1</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>3</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-							</BlendTrackAssocList>
-						</BlendTrack>
-					</BlendTrackList>
-				</BlendContainer>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
